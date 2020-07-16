@@ -37,7 +37,7 @@ function heightDetect() {
 	$('.tabs li').click(function(event) {
 		$(this).parent().find("li").removeClass('active');
 		$(this).addClass('active');
-		$(this).parent().parent().parent().find(".tab-content").hide();
+		$(".tab-content").hide();
 		var selectTab = $(this).find('a').attr("href");
 		$(selectTab).fadeIn();
 	});
@@ -48,7 +48,7 @@ function heightDetect() {
 	$('.tabs-card li').click(function(event) {
 		$(this).parent().find("li").removeClass('active');
 		$(this).addClass('active');
-		$(this).parent().parent().parent().find(".tabs-card-pane").hide();
+		$(".tabs-card-pane").hide();
 		var selectTab2 = $(this).find('a').attr("href");
 		$(selectTab2).fadeIn();
 	});
@@ -177,6 +177,13 @@ $('.slider-card').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1
 	});
+$('.slider-team').slick({
+		arrows: false,
+		dots: true,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
@@ -185,7 +192,13 @@ $('.slider-card').slick({
 	//Документация: http://fancybox.net/howto
 	//<a class="fancybox"><img src="image.jpg" /></a>
 	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
-	$(".fancybox").fancybox();
+$(".fancybox").fancybox({
+    helpers:  {
+      overlay : {
+        locked : false
+      }
+    }
+  });
 
 
 	//Кнопка "Наверх"
