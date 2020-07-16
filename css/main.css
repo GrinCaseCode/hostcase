@@ -22,7 +22,7 @@ body textarea:focus:required:invalid {
 body input:required:valid,
 body textarea:required:valid {
 	
-}
+} 
 body {
 	font-family: "RobotoRegular", sans-serif;
 	font-size: 16px;
