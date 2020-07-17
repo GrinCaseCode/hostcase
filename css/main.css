@@ -2117,6 +2117,6 @@ transition: all 0.3s;
 .catalog {
 	padding-bottom: 30px;
 }
-.tabs_catalog li a {
+.tabs_catalog li a { 
 	padding: 0 10px;
 }
