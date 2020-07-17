@@ -1,5 +1,16 @@
 $(document).ready(function() {
-
+$(document).one( "mouseleave", function(e) {
+if (e.clientY < 10) {
+         $.fancybox.open("#catch",
+         	{
+    helpers:  {
+      overlay : {
+        locked : false
+      }
+    }
+  });  
+    } 
+});
 
 	//плавный скролл
 	$(".navigat li a").mPageScroll2id();
@@ -31,10 +42,10 @@ function heightDetect() {
       heightDetect();
     });
 
-	$('.tabs li a').click(function(event) {
+	$('.tabs_portfolio li a').click(function(event) {
 		event.preventDefault();
 	});
-	$('.tabs li').click(function(event) {
+	$('.tabs_portfolio li').click(function(event) {
 		$(this).parent().find("li").removeClass('active');
 		$(this).addClass('active');
 		$(".tab-content").hide();
