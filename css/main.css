@@ -2268,7 +2268,7 @@ z-index: -1;
 }
 .item-feature__value {
 	padding-left: 2px;
-	background-color: #fff;
+	background-color: #fafafa;
 	z-index: 1;
 }
 .item-feature__name {
