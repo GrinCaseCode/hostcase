@@ -1,4 +1,15 @@
 $(document).ready(function() {
+
+	$(".item-team").click(function() {
+		var NameTeam = $(this).find(".team-info__name").html();
+		var DescrTeam = $(this).find(".team-info__descr").html();
+		var ImgTeam = $(this).find(".item-team__image img").attr('src');
+		$(".item-team__name").html( NameTeam );	
+		$(".item-team__descr").html( DescrTeam );
+		$(".item-team_active .item-team__image img").attr('src', ImgTeam);	
+		});
+
+
 $(document).one( "mouseleave", function(e) {
 if (e.clientY < 10) {
          $.fancybox.open("#catch",
@@ -111,6 +122,34 @@ function heightDetect() {
 		}
 		]
 	});
+
+	/* new 2 */
+
+	$('.slider-projects').slick({
+		arrows: false,
+		dots: true,
+		infinite: true,
+		slidesToShow: 1,
+		 prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+        nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+		slidesToScroll: 1,
+		
+	});
+
+	$('.link-blue_more-card').click(function(e) {
+		e.preventDefault();
+		
+		if ($(".hidden-text-card").is(":hidden")) {
+			$(".hidden-text-card").slideDown(200);
+			 $(this).html("Скрыть");
+        } else {
+        	$(".hidden-text-card").slideUp(200);
+           $(this).html("Смотреть все описание");
+        }
+      });
+
+
+/* end new 2 */
 
 	var $status = $('.slider-counter');
 var $slickElement = $('.slider-sertificats');
